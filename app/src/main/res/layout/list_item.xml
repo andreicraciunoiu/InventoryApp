@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin">
+
+    <RelativeLayout
+        android:id="@+id/product_list_item_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:contentDescription="@string/edit_product_image_content_description"
+            android:id="@+id/product_image"
+            style="@style/product_image_style"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <TextView
+            android:id="@+id/product_name"
+            style="@style/product_name_text_style"
+            android:layout_toEndOf="@+id/product_image"
+            android:textColor="@color/colorPrimaryDark"
+            tools:text="@string/product_name" />
+
+        <TextView
+            android:id="@+id/product_price"
+            style="@style/product_price_text_style"
+            android:layout_below="@+id/product_name"
+            android:layout_toEndOf="@+id/product_image"
+            android:textColor="@color/colorPrimaryDark"
+            tools:text="@string/product_price" />
+
+        <TextView
+            android:id="@+id/product_quantity_available"
+            style="@style/product_quantity_available_text_style"
+            android:layout_below="@+id/product_price"
+            android:layout_toEndOf="@+id/product_image"
+            android:textColor="@color/colorPrimaryDark"
+            tools:text="@string/product_quantity" />
+
+        <TextView
+            android:id="@+id/in_stock_text"
+            style="@style/product_quantity_available_text_style"
+            android:layout_below="@+id/product_price"
+            android:layout_toEndOf="@+id/product_quantity_available"
+            android:text="@string/in_stock"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/product_sell_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/product_image"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/buttons"
+            android:focusable="false"
+            android:text="@string/product_sale_controls_sell_button"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+</LinearLayout>
